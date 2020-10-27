@@ -1,0 +1,329 @@
+bind_host: 0.0.0.0
+bind_port: 80
+users:
+- name: captain
+  password: $2a$10$IiRWw1SD.xoh5cJJPUXac.UwODVxcJ8SZQXgXGdIl2sufJ2DiUi8u
+http_proxy: ""
+language: ""
+rlimit_nofile: 0
+debug_pprof: false
+web_session_ttl: 720
+dns:
+  bind_host: 0.0.0.0
+  port: 53
+  statistics_interval: 1
+  querylog_enabled: true
+  querylog_file_enabled: true
+  querylog_interval: 1
+  querylog_size_memory: 1000
+  anonymize_client_ip: false
+  protection_enabled: true
+  blocking_mode: default
+  blocking_ipv4: ""
+  blocking_ipv6: ""
+  blocked_response_ttl: 10
+  parental_block_host: family-block.dns.adguard.com
+  safebrowsing_block_host: standard-block.dns.adguard.com
+  ratelimit: 20
+  ratelimit_whitelist: []
+  refuse_any: true
+  upstream_dns:
+  - https://dns10.quad9.net/dns-query
+  - 1.1.1.1
+  - 1.0.0.1
+  - https://dns.cloudflare.com/dns-query
+  - tls://1.1.1.1
+  - 8.8.8.8
+  - 8.8.4.4
+  - https://dns.google/dns-query
+  - tls://dns.google
+  - 80.80.80.80
+  - 80.80.81.81
+  - 208.67.222.123
+  - 208.67.220.123
+  - 156.154.70.1
+  - 156.154.71.1
+  - 156.154.70.5
+  - 156.154.71.5
+  - 156.154.70.3
+  - 156.154.71.3
+  bootstrap_dns:
+  - 9.9.9.10
+  - 149.112.112.10
+  - 2620:fe::10
+  - 2620:fe::fe:10
+  all_servers: true
+  fastest_addr: false
+  allowed_clients: []
+  disallowed_clients: []
+  blocked_hosts:
+  - '||ipv6.microsoft.com^'
+  - '||telemetry.microsoft.com^'
+  - '||login.live.com^'
+  - '||fs.microsoft.com^'
+  - '||technet.microsoft.com^'
+  - '||windowsupdate.com^'
+  - '||update.microsoft.com^'
+  - '||go.microsoft.com^'
+  - '||detectportal.firefox.com^'
+  - '||push.services.mozilla.com^'
+  - '||shavar.services.mozilla.com^'
+  - '||alikunlun.net^'
+  cache_size: 4194304
+  cache_ttl_min: 3600
+  cache_ttl_max: 14800
+  bogus_nxdomain: []
+  aaaa_disabled: true
+  enable_dnssec: false
+  edns_client_subnet: false
+  filtering_enabled: true
+  filters_update_interval: 0
+  parental_enabled: false
+  safesearch_enabled: false
+  safebrowsing_enabled: false
+  safebrowsing_cache_size: 1048576
+  safesearch_cache_size: 1048576
+  parental_cache_size: 1048576
+  cache_time: 30
+  rewrites:
+  - domain: '*.baidu.com'
+    answer: 0.0.0.0
+  - domain: '*.360.com'
+    answer: 0.0.0.0
+  - domain: www.youtube.com
+    answer: 0.0.0.0
+  - domain: '*.google.com'
+    answer: 0.0.0.0
+  - domain: '*.ytimg.com'
+    answer: 0.0.0.0
+  - domain: sogou.com
+    answer: 0.0.0.0
+  - domain: youtube.com
+    answer: 0.0.0.0
+  - domain: '*.googleusercontent.com'
+    answer: 0.0.0.0
+  - domain: '*.sogou.com'
+    answer: 0.0.0.0.
+  - domain: duckduckgo.com
+    answer: 20.43.161.105
+  - domain: external-content.duckduckgo.com
+    answer: 20.43.160.189
+  - domain: twitch.tv
+    answer: 151.101.130.167
+  - domain: www.twitch.tv
+    answer: 151.101.130.167
+  - domain: api.twitch.tv
+    answer: 151.101.198.214
+  - domain: '*.duckduckgo.com'
+    answer: 0.0.0.0
+  - domain: abs.twimg.com
+    answer: 117.18.237.70
+  - domain: pbs.twimg.com
+    answer: 117.18.237.70
+  - domain: ton.twimg.com
+    answer: 117.18.237.70
+  - domain: cdn.syndication.twimg.com
+    answer: 117.18.237.70
+  - domain: video.twimg.com
+    answer: 192.229.232.217
+  - domain: platform.twitter.com
+    answer: 23.13.161.224
+  blocked_services:
+  - facebook
+  - whatsapp
+  - instagram
+  - youtube
+  - netflix
+  - snapchat
+  - discord
+  - skype
+  - amazon
+  - ebay
+  - origin
+  - steam
+  - epic_games
+  - reddit
+  - ok
+  - vk
+  - mail_ru
+  - tiktok
+  - twitter
+  - twitch
+tls:
+  enabled: false
+  server_name: ""
+  force_https: false
+  port_https: 443
+  port_dns_over_tls: 853
+  allow_unencrypted_doh: false
+  strict_sni_check: false
+  certificate_chain: ""
+  private_key: ""
+  certificate_path: ""
+  private_key_path: ""
+filters:
+- enabled: true
+  url: C:\AdGuardHome\myfilters\adaway.txt
+  name: AdAway
+  id: 2
+- enabled: true
+  url: C:\AdGuardHome\myfilters\malwaredomainlist.txt
+  name: MalwareDomainList.com Hosts List
+  id: 4
+- enabled: true
+  url: C:\AdGuardHome\myfilters\easylist.txt
+  name: easylist
+  id: 1599038283
+- enabled: true
+  url: C:\AdGuardHome\myfilters\AdGuardSDNSFilter.txt
+  name: AdGuard DNS filter
+  id: 1599038284
+- enabled: true
+  url: C:\AdGuardHome\myfilters\hostsadway.txt
+  name: AdAway default blocklist
+  id: 1599038285
+- enabled: true
+  url: C:\AdGuardHome\myfilters\antiadeasylist.txt
+  name: antiadeasylist
+  id: 1599038286
+- enabled: true
+  url: C:\AdGuardHome\myfilters\cjxannoyance.txt
+  name: cjxannoyance
+  id: 1599038287
+- enabled: true
+  url: C:\AdGuardHome\myfilters\demostichosts.txt
+  name: demostichosts
+  id: 1599038288
+- enabled: true
+  url: C:\AdGuardHome\myfilters\easylistchina.txt
+  name: easylistchina
+  id: 1599038289
+- enabled: true
+  url: C:\AdGuardHome\myfilters\easylistcookie.txt
+  name: easylistcookie
+  id: 1599038290
+- enabled: true
+  url: C:\AdGuardHome\myfilters\easyprivacy.txt
+  name: easyprivacy
+  id: 1599038291
+- enabled: true
+  url: C:\AdGuardHome\myfilters\foreinerhosts.txt
+  name: foreinerhosts
+  id: 1599038292
+- enabled: true
+  url: C:\AdGuardHome\myfilters\hosts.txt
+  name: hosts
+  id: 1599038293
+- enabled: true
+  url: C:\AdGuardHome\myfilters\hosts1024.txt
+  name: hosts1024
+  id: 1599038294
+- enabled: true
+  url: C:\AdGuardHome\myfilters\hostshblock.txt
+  name: hostshblock
+  id: 1599038296
+- enabled: true
+  url: C:\AdGuardHome\myfilters\hostskong.txt
+  name: hostskong
+  id: 1599038297
+- enabled: true
+  url: C:\AdGuardHome\myfilters\hostsmvp.txt
+  name: hostsmvp
+  id: 1599038298
+- enabled: true
+  url: C:\AdGuardHome\myfilters\korealhosts.txt
+  name: korealhosts
+  id: 1599038299
+- enabled: true
+  url: C:\AdGuardHome\myfilters\neohosts.txt
+  name: neohosts
+  id: 1599038300
+- enabled: true
+  url: C:\AdGuardHome\myfilters\zhihu.txt
+  name: zhihu
+  id: 1599038301
+- enabled: true
+  url: C:\AdGuardHome\myfilters\chinalist.txt
+  name: chinalist
+  id: 1599218890
+- enabled: true
+  url: C:\AdGuardHome\myfilters\chinalisthiden.txt
+  name: chinalisthiden
+  id: 1599218891
+- enabled: true
+  url: C:\AdGuardHome\myfilters\backdoor.txt
+  name: backdoor
+  id: 1599445189
+- enabled: true
+  url: C:\AdGuardHome\myfilters\ads.txt
+  name: ADS
+  id: 1602001387
+whitelist_filters: []
+user_rules:
+- '||prod.mozaws.net^$important'
+- '||wpad.lan^$important'
+- '||www.youtube.com^$important'
+- '||tweb.sched.ovscdns.com^$important'
+- '||1442234.s2.cdntip.com^$important'
+- '||opencdnzhihustatic.jomodns.com^$important'
+- '||prod-tp.sumo.mozit.cloud^$important'
+- '@@||addons.mozilla.org^$important'
+- '@@||addons.cdn.mozilla.net^$important'
+- '||content-autofill.googleapis.com^$important'
+- '||connect.facebook.net^$important'
+- '||scontent.xx.fbcdn.net^$important'
+- '||stopservice.chshap.blob.core.windows.net^$important'
+- '||firefox.settings.services.mozilla.com^$important'
+- '||mwcloudcdn.com^$important'
+- '||chshap.blob.core.windows.net^$important'
+- '||classify-client.services.mozilla.com^$important'
+- '||shavar.services.mozilla.com^$important'
+- '||icecat.settings.services.mozilla.com^$important'
+- '||snippets.cdn.mozilla.net^$important'
+- '@@||cdn.jsdelivr.net^$important'
+- '||login.live.com^$important'
+- '||onecs-live.azureedge.net^$important'
+- '||www.tensorflow.org^$important'
+- ""
+dhcp:
+  enabled: false
+  interface_name: ""
+  gateway_ip: ""
+  subnet_mask: ""
+  range_start: ""
+  range_end: ""
+  lease_duration: 86400
+  icmp_timeout_msec: 1000
+clients:
+- name: iphoone
+  tags: []
+  ids:
+  - 192.168.123.233
+  use_global_settings: true
+  filtering_enabled: false
+  parental_enabled: false
+  safesearch_enabled: false
+  safebrowsing_enabled: false
+  use_global_blocked_services: true
+  blocked_services: []
+  upstreams: []
+- name: captain
+  tags: []
+  ids:
+  - 127.0.0.1
+  use_global_settings: true
+  filtering_enabled: false
+  parental_enabled: false
+  safesearch_enabled: false
+  safebrowsing_enabled: false
+  use_global_blocked_services: true
+  blocked_services: []
+  upstreams: []
+log_compress: false
+log_localtime: false
+log_max_backups: 0
+log_max_size: 100
+log_max_age: 3
+log_file: ""
+verbose: false
+schema_version: 6

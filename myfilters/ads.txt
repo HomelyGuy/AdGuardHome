@@ -1,0 +1,69 @@
+||61644.com^
+||https://wanpaig.4567.org^
+
+##mozila
+||mozgcp.net^$important
+||mozilla.net^
+
+
+## google
+||google.com^$important
+||gstatic.com^$important
+||www.gstatic.com^$important
+||googleapis.com^$important
+||googlevideo.com^$important
+
+##bilibili 
+||chat.bilibili.com^$important
+
+
+
+
+##taobao
+||taobao.com^$important
+||aliapp.org^$important
+##||alikunlun.com^$important
+
+##icloud
+@@||icloud.com^$important
+
+##apple
+@@||push.apple.com^$important
+||push-apple.com.akadns.net^$important
+||apple.cn^$important
+
+## youtube
+||ggpht.com^$important
+||googleapis.com^$important
+
+## windows update
+||windowsupdate.com^$important
+||onecs-live.azureedge.net^
+
+## wikimedia
+||intake-analytics.wikimedia.org^$important
+
+## guo
+||guo.media^$important
+||www.guo.media^$important
+||gnews.org^$important
+||www.guo.media^$important
+||gnews-media-offload.s3.amazonaws.com^$important
+
+
+## freeweibo
+||freeweibo.com^$important
+||freewechat.com^$important
+
+## zhihu
+||zzhihu.v.bsgslb.cn^$important
+||pic1.zhimg.com.cmspeed.sched.apcdns.com^$important
+||pic1.zhimg.com^$important
+||pic2.zhimg.com^$important
+||pic3.zhimg.com^$important
+||pic4.zhimg.com^$important
+||zhstatic.zhihu.com.w.alikunlun.net^$important
+||static.zhihu.com.toversea.sched.apcdns.com^$important
+||picb.zhimg.com^$important
+@@||www.zhihu.com^$important
+@@||zhuanlan.zhihu.com^$important

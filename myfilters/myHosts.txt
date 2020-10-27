@@ -1,0 +1,2 @@
+#20.43.161.105 duckduckgo.com
+#20.43.160.189 external-content.duckduckgo.com
