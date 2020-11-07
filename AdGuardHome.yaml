@@ -284,7 +284,6 @@ user_rules:
 - '||login.live.com^$important'
 - '||onecs-live.azureedge.net^$important'
 - '||www.tensorflow.org^$important'
-- ""
 dhcp:
   enabled: false
   interface_name: ""

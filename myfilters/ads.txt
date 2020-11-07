@@ -16,8 +16,9 @@
 ##bilibili 
 ||chat.bilibili.com^$important
 
-
-
+## cloudflare
+||report-uri.cloudflare.com^$important
+||nel.cloudflare.com^$important
 
 ##taobao
 ||taobao.com^$important
