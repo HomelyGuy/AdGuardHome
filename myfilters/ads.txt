@@ -8,8 +8,8 @@
 
 ## google
 ||google.com^$important
-||gstatic.com^$important
-||www.gstatic.com^$important
+## ||gstatic.com^$important
+## ||www.gstatic.com^$important
 ||googleapis.com^$important
 ||googlevideo.com^$important
 
@@ -57,14 +57,6 @@
 ||freewechat.com^$important
 
 ## zhihu
-||zzhihu.v.bsgslb.cn^$important
-||pic1.zhimg.com.cmspeed.sched.apcdns.com^$important
-||pic1.zhimg.com^$important
-||pic2.zhimg.com^$important
-||pic3.zhimg.com^$important
-||pic4.zhimg.com^$important
-||zhstatic.zhihu.com.w.alikunlun.net^$important
-||static.zhihu.com.toversea.sched.apcdns.com^$important
-||picb.zhimg.com^$important
-@@||www.zhihu.com^$important
-@@||zhuanlan.zhihu.com^$important
+## ||zzhihu.v.bsgslb.cn^$important
+## ||zhstatic.zhihu.com.w.alikunlun.net^$important
+## ||static.zhihu.com.toversea.sched.apcdns.com^$important

@@ -24,7 +24,7 @@ dns:
   blocked_response_ttl: 10
   parental_block_host: family-block.dns.adguard.com
   safebrowsing_block_host: standard-block.dns.adguard.com
-  ratelimit: 20
+  ratelimit: 1000
   ratelimit_whitelist: []
   refuse_any: true
   upstream_dns:
@@ -47,19 +47,19 @@ dns:
   - 156.154.71.5
   - 156.154.70.3
   - 156.154.71.3
+  upstream_dns_file: ""
   bootstrap_dns:
   - 9.9.9.10
   - 149.112.112.10
   - 2620:fe::10
   - 2620:fe::fe:10
-  all_servers: true
+  all_servers: false
   fastest_addr: false
   allowed_clients: []
   disallowed_clients: []
   blocked_hosts:
   - '||ipv6.microsoft.com^'
   - '||telemetry.microsoft.com^'
-  - '||login.live.com^'
   - '||fs.microsoft.com^'
   - '||technet.microsoft.com^'
   - '||windowsupdate.com^'
@@ -76,6 +76,8 @@ dns:
   aaaa_disabled: true
   enable_dnssec: false
   edns_client_subnet: false
+  max_goroutines: 50
+  ipset: []
   filtering_enabled: true
   filters_update_interval: 0
   parental_enabled: false
@@ -106,16 +108,14 @@ dns:
     answer: 0.0.0.0.
   - domain: duckduckgo.com
     answer: 20.43.161.105
-  - domain: external-content.duckduckgo.com
-    answer: 20.43.160.189
+  - domain: '*.duckduckgo.com'
+    answer: 20.43.161.105
   - domain: twitch.tv
     answer: 151.101.130.167
   - domain: www.twitch.tv
     answer: 151.101.130.167
   - domain: api.twitch.tv
     answer: 151.101.198.214
-  - domain: '*.duckduckgo.com'
-    answer: 0.0.0.0
   - domain: abs.twimg.com
     answer: 117.18.237.70
   - domain: pbs.twimg.com
@@ -128,6 +128,10 @@ dns:
     answer: 192.229.232.217
   - domain: platform.twitter.com
     answer: 23.13.161.224
+  - domain: tensorflow.google.cn
+    answer: 180.163.150.34
+  - domain: '*.tensorflow.google.cn'
+    answer: 180.163.150.34
   blocked_services:
   - facebook
   - whatsapp
@@ -155,6 +159,7 @@ tls:
   force_https: false
   port_https: 443
   port_dns_over_tls: 853
+  port_dns_over_quic: 784
   allow_unencrypted_doh: false
   strict_sni_check: false
   certificate_chain: ""
@@ -163,99 +168,99 @@ tls:
   private_key_path: ""
 filters:
 - enabled: true
-  url: C:\AdGuardHome\myfilters\adaway.txt
+  url: /home/captain/.adhome/myfilters/adaway.txt
   name: AdAway
   id: 2
 - enabled: true
-  url: C:\AdGuardHome\myfilters\malwaredomainlist.txt
+  url: /home/captain/.adhome/myfilters/malwaredomainlist.txt
   name: MalwareDomainList.com Hosts List
   id: 4
 - enabled: true
-  url: C:\AdGuardHome\myfilters\easylist.txt
+  url: /home/captain/.adhome/myfilters/easylist.txt
   name: easylist
   id: 1599038283
 - enabled: true
-  url: C:\AdGuardHome\myfilters\AdGuardSDNSFilter.txt
+  url: /home/captain/.adhome/myfilters/AdGuardSDNSFilter.txt
   name: AdGuard DNS filter
   id: 1599038284
 - enabled: true
-  url: C:\AdGuardHome\myfilters\hostsadway.txt
+  url: /home/captain/.adhome/myfilters/hostsadway.txt
   name: AdAway default blocklist
   id: 1599038285
 - enabled: true
-  url: C:\AdGuardHome\myfilters\antiadeasylist.txt
+  url: /home/captain/.adhome/myfilters/antiadeasylist.txt
   name: antiadeasylist
   id: 1599038286
 - enabled: true
-  url: C:\AdGuardHome\myfilters\cjxannoyance.txt
+  url: /home/captain/.adhome/myfilters/cjxannoyance.txt
   name: cjxannoyance
   id: 1599038287
 - enabled: true
-  url: C:\AdGuardHome\myfilters\demostichosts.txt
+  url: /home/captain/.adhome/myfilters/demostichosts.txt
   name: demostichosts
   id: 1599038288
 - enabled: true
-  url: C:\AdGuardHome\myfilters\easylistchina.txt
+  url: /home/captain/.adhome/myfilters/easylistchina.txt
   name: easylistchina
   id: 1599038289
 - enabled: true
-  url: C:\AdGuardHome\myfilters\easylistcookie.txt
+  url: /home/captain/.adhome/myfilters/easylistcookie.txt
   name: easylistcookie
   id: 1599038290
 - enabled: true
-  url: C:\AdGuardHome\myfilters\easyprivacy.txt
+  url: /home/captain/.adhome/myfilters/easyprivacy.txt
   name: easyprivacy
   id: 1599038291
 - enabled: true
-  url: C:\AdGuardHome\myfilters\foreinerhosts.txt
+  url: /home/captain/.adhome/myfilters/foreinerhosts.txt
   name: foreinerhosts
   id: 1599038292
 - enabled: true
-  url: C:\AdGuardHome\myfilters\hosts.txt
+  url: /home/captain/.adhome/myfilters/hosts.txt
   name: hosts
   id: 1599038293
 - enabled: true
-  url: C:\AdGuardHome\myfilters\hosts1024.txt
+  url: /home/captain/.adhome/myfilters/hosts1024.txt
   name: hosts1024
   id: 1599038294
 - enabled: true
-  url: C:\AdGuardHome\myfilters\hostshblock.txt
+  url: /home/captain/.adhome/myfilters/hostshblock.txt
   name: hostshblock
   id: 1599038296
 - enabled: true
-  url: C:\AdGuardHome\myfilters\hostskong.txt
+  url: /home/captain/.adhome/myfilters/hostskong.txt
   name: hostskong
   id: 1599038297
 - enabled: true
-  url: C:\AdGuardHome\myfilters\hostsmvp.txt
+  url: /home/captain/.adhome/myfilters/hostsmvp.txt
   name: hostsmvp
   id: 1599038298
 - enabled: true
-  url: C:\AdGuardHome\myfilters\korealhosts.txt
+  url: /home/captain/.adhome/myfilters/korealhosts.txt
   name: korealhosts
   id: 1599038299
 - enabled: true
-  url: C:\AdGuardHome\myfilters\neohosts.txt
+  url: /home/captain/.adhome/myfilters/neohosts.txt
   name: neohosts
   id: 1599038300
 - enabled: true
-  url: C:\AdGuardHome\myfilters\zhihu.txt
+  url: /home/captain/.adhome/myfilters/zhihu.txt
   name: zhihu
   id: 1599038301
 - enabled: true
-  url: C:\AdGuardHome\myfilters\chinalist.txt
+  url: /home/captain/.adhome/myfilters/chinalist.txt
   name: chinalist
   id: 1599218890
 - enabled: true
-  url: C:\AdGuardHome\myfilters\chinalisthiden.txt
+  url: /home/captain/.adhome/myfilters/chinalisthiden.txt
   name: chinalisthiden
   id: 1599218891
 - enabled: true
-  url: C:\AdGuardHome\myfilters\backdoor.txt
+  url: /home/captain/.adhome/myfilters/backdoor.txt
   name: backdoor
   id: 1599445189
 - enabled: true
-  url: C:\AdGuardHome\myfilters\ads.txt
+  url: /home/captain/.adhome/myfilters/ads.txt
   name: ADS
   id: 1602001387
 whitelist_filters: []
@@ -265,7 +270,7 @@ user_rules:
 - '||www.youtube.com^$important'
 - '||tweb.sched.ovscdns.com^$important'
 - '||1442234.s2.cdntip.com^$important'
-- '||opencdnzhihustatic.jomodns.com^$important'
+- '##||opencdnzhihustatic.jomodns.com^$important'
 - '||prod-tp.sumo.mozit.cloud^$important'
 - '@@||addons.mozilla.org^$important'
 - '@@||addons.cdn.mozilla.net^$important'
@@ -281,23 +286,35 @@ user_rules:
 - '||icecat.settings.services.mozilla.com^$important'
 - '||snippets.cdn.mozilla.net^$important'
 - '@@||cdn.jsdelivr.net^$important'
-- '||login.live.com^$important'
 - '||onecs-live.azureedge.net^$important'
 - '||www.tensorflow.org^$important'
+- '@@||download.mozilla.org^$important'
+- '@@||download-installer.cdn.mozilla.net^$important'
+- '@@||fonts.googleapis.com^$important'
+- '@@||storage.googleapis.com^$important'
+- '@@||item.taobao.com^$important'
+- ""
 dhcp:
   enabled: false
   interface_name: ""
-  gateway_ip: ""
-  subnet_mask: ""
-  range_start: ""
-  range_end: ""
-  lease_duration: 86400
-  icmp_timeout_msec: 1000
+  dhcpv4:
+    gateway_ip: ""
+    subnet_mask: ""
+    range_start: ""
+    range_end: ""
+    lease_duration: 86400
+    icmp_timeout_msec: 1000
+    options: []
+  dhcpv6:
+    range_start: ""
+    lease_duration: 86400
+    ra_slaac_only: false
+    ra_allow_slaac: false
 clients:
-- name: iphoone
+- name: captain
   tags: []
   ids:
-  - 192.168.123.233
+  - 127.0.0.1
   use_global_settings: true
   filtering_enabled: false
   parental_enabled: false
@@ -306,10 +323,10 @@ clients:
   use_global_blocked_services: true
   blocked_services: []
   upstreams: []
-- name: captain
+- name: iphoone
   tags: []
   ids:
-  - 127.0.0.1
+  - 192.168.123.233
   use_global_settings: true
   filtering_enabled: false
   parental_enabled: false
@@ -325,4 +342,4 @@ log_max_size: 100
 log_max_age: 3
 log_file: ""
 verbose: false
-schema_version: 6
+schema_version: 7

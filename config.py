@@ -1,6 +1,6 @@
 import re
 import os
-from shutil import copyfile
+from shutil import copyfile, rmtree
 
 pat = re.compile("url: .*?myfilters.(.*?)$")
 path = os.getcwd()
@@ -8,6 +8,10 @@ path = os.getcwd()
 platform = os.name
 lines = []
 
+try:
+    rmtree("AdGuardHome_0.yaml")
+except :
+    pass
 copyfile("AdGuardHome.yaml", "AdGuardHome_0.yaml")
 with open("AdGuardHome.yaml") as f:
     line = f.readline()
